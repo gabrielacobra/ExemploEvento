@@ -6,10 +6,12 @@ namespace ExemploEvento
     public class Carro
     {
         int qtdTanque = 0;
+        public string Telefone { get; set; }
 
-        public Carro(int qtdGasolina)
+        public Carro(int qtdGasolina, string telefone)
         {
-            this.qtdTanque = qtdGasolina;            
+            this.qtdTanque = qtdGasolina;   
+            this.Telefone = telefone;         
         }
 
         public void Ligar()
@@ -20,7 +22,7 @@ namespace ExemploEvento
                 this.qtdTanque--;
 
                 if(this.qtdTanque.Equals(3)){
-                    this.Ligacao("11984981497");
+                    this.Ligacao(this.Telefone);                    
                 }
 
                 if(this.qtdTanque.Equals(0)){

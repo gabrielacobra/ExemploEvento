@@ -6,7 +6,7 @@ namespace ExemploEvento
     {
         static void Main(string[] args)
         {
-            Carro carro = new Carro (10); //Carro com 10l de gasolina
+            Carro carro = new Carro (10, "4833331666"); //Carro com 10l de gasolina
             carro.TanqueVazio += new Carro.EventoCarro(tanque_vazio); //adicionando os eventos dentro do carro. quando ocorrer o TanqueVazio (evento) deve ocorrer o método tanque_vazio
             carro.TanqueVazio += new Carro.EventoCarro(ligar_uber);
             carro.Ligacao += new Carro.Chamar(ligar_casa);
